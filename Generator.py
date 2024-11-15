@@ -7,7 +7,6 @@ from elevenlabs import ElevenLabs
 
 # keys
 client = OpenAI(api_key = st.secrets['OPENAI_API_KEY'])
-LAB11_API_KEY ="sk_efa86e88a54a50a37f63b9ce1a501e6abe4317cb37f43a02"
 
 # --------------------
 #     functions
@@ -302,7 +301,7 @@ response = None
 
 if col1.button("Generate Music"):
     # API request setup
-    headers = {"xi-api-key": LAB11_API_KEY}
+    headers = {"xi-api-key": st.secrets['LAB11_API_KEY']}
     json_data = {   
         "text": music_generated,
         "prompt_influence": 0.5,
