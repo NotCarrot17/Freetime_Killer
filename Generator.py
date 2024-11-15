@@ -1,6 +1,5 @@
 import streamlit as st
 import os
-from dotenv import load_dotenv
 from openai import OpenAI
 from io import BytesIO
 import requests
@@ -53,7 +52,7 @@ def code_generator(game_prompt, char_design_url):
         Do not include any explanation, and HTML.
                 """
   response = client.chat.completions.create(
-      model='gpt-4o',
+      model='gpt-4o-mini',
       messages=[
           {"role": "system", "content": code_prompt},
           {"role": "user", "content": game_prompt}
@@ -80,7 +79,7 @@ def shooting_code_generator(game_prompt, char_design_url):
     > - Basic sound effects for shooting, enemy defeat, and game-over.
     """
   response = client.chat.completions.create(
-      model='gpt-4o',
+      model='gpt-4o-mini',
       messages=[
           {"role": "system", "content": shooting_prompt},
           {"role": "user", "content": game_prompt}
@@ -105,7 +104,7 @@ def dino_code_generator(game_prompt, char_design_url):
   11. The character image should be used as the runner, and the obstacles should be simple blocks or cacti."                
   """
   response = client.chat.completions.create(
-      model='gpt-4o',
+      model='gpt-4o-mini',
       messages=[
           {"role": "system", "content": dino_prompt},
           {"role": "user", "content": game_prompt}
@@ -131,7 +130,7 @@ def dino_code_generator(game_prompt, char_design_url):
     Basic sound effects for jumping, collecting items, and game-over. 
     """
   response = client.chat.completions.create(
-      model='gpt-4o',
+      model='gpt-4o-mini',
       messages=[
           {"role": "system", "content": platform_prompt},
           {"role": "user", "content": game_prompt}
@@ -158,7 +157,7 @@ def dungeon_code_generator(game_prompt, char_design_url):
       Game Over Condition: If the player's health reaches zero, display a game-over message.
     """
   response = client.chat.completions.create(
-      model='gpt-4o',
+      model='gpt-4o-mini',
       messages=[
           {"role": "system", "content": dungeon_prompt},
           {"role": "user", "content": game_prompt}
