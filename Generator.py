@@ -305,7 +305,6 @@ if col1.button("Generate Music"):
     headers = {"xi-api-key": LAB11_API_KEY}
     json_data = {   
         "text": music_generated,
-        "duration_seconds": 2.0,
         "prompt_influence": 0.5,
     }
 
