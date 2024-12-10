@@ -2,7 +2,6 @@
 import streamlit as st
 from io import BytesIO
 
-# Display saved images in a grid layout
 st.subheader("Past Generated and Saved Images/Code/Audio.")
 st.divider()
 
